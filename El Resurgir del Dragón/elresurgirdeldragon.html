@@ -247,7 +247,7 @@
  
 				</div>
 		    		
-				<!--Saving Throws and Experience-->
+				<!--Saving Throws, Habilidades and Experience-->
 				<div class="sheet-col-15-24 sheet-padr">
                     <div class="sheet-col-7-9 sheet-padr">
     		        <h4 class="sheet-center" style="width:96%">Habilidades </h4>
@@ -257,81 +257,135 @@
 						    <div class="sheet-col-3-5 sheet-left sheet-small-label">&nbsp;</div>
 						    <div class="sheet-col-1-5 sheet-center sheet-small-label">Valor</div>
 						</div>
+				<!--Acrobacias-->
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_acrobacias_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_acrobacias_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Acrobacia" class="sheet-blank-roll-button" value="&{template:erd} {{title=Acrobacias}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{dexterity}-10)/2))]]+(@{acrobacias_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{dexterity}-10)/2))]]+(@{acrobacias_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Acrobacias (DES)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_acrobacias" value="[[[[(floor((@{dexterity}-10)/2))]]+(@{acrobacias_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true"  /></div>
 						</div>
+				<!--Arcanos-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_arcanos_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_arcanos_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Arcanos" class="sheet-blank-roll-button" value="&{template:erd} {{title=Arcanos}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{arcanos_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{arcanos_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Arcanos (INT)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_arcanos" value="[[[[(floor((@{intelligence}-10)/2))]]+(@{arcanos_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Atletismo-->			
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_atletismo_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_atletismo_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Atletismo" class="sheet-blank-roll-button" value="&{template:erd} {{title=Atletismo}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{strength}-10)/2))]]+(@{atletismo_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{strength}-10)/2))]]+(@{atletismo_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Atletismo (FUE)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_atletismo" value="[[[[(floor((@{strength}-10)/2))]]+(@{atletismo_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Engañar-->			
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_engañar_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_engañar_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Engañar" class="sheet-blank-roll-button" value="&{template:erd} {{title=Engañar}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{charisma}-10)/2))]]+(@{engañar_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{charisma}-10)/2))]]+(@{engañar_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Engañar (CAR)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_engañar" value="[[[[(floor((@{charisma}-10)/2))]]+(@{engañar_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Historia-->			
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_historia_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_historia_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Historia" class="sheet-blank-roll-button" value="&{template:erd} {{title=Historia}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{historia_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{historia_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Historia (INT)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_historia" name="attr_arcanos" value="[[[[(floor((@{intelligence}-10)/2))]]+(@{historia_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Interpretacion-->			
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_interpretacion_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_interpretacion_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Interpretacion" class="sheet-blank-roll-button" value="&{template:erd} {{title=Interpretación}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{charisma}-10)/2))]]+(@{interpretacion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{charisma}-10)/2))]]+(@{interpretacion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Interpretación (CAR)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_interpretacion" value="[[[[(floor((@{charisma}-10)/2))]]+(@{interpretacion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Intimidar-->			
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_intimidar_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_intimidar_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Intimidar" class="sheet-blank-roll-button" value="&{template:erd} {{title=Intimidar}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{charisma}-10)/2))]]+(@{intimidar_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{charisma}-10)/2))]]+(@{intimidar_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Intimidar (CAR)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_intimidar" name="attr_arcanos" value="[[[[(floor((@{charisma}-10)/2))]]+(@{intimidar_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Investigacion-->			
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_investigacion_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_investigacion_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Investigacion" class="sheet-blank-roll-button" value="&{template:erd} {{title=Investigación}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{investigacion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{investigacion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Investigación (INT)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_investigacion" value="[[[[(floor((@{intelligence}-10)/2))]]+(@{investigacion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Juego de manos-->			
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_juegomanos_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_juegomanos_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Juegomanos" class="sheet-blank-roll-button" value="&{template:erd} {{title=Juegos de Manos}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{dexterity}-10)/2))]]+(@{juegomanos_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{dexterity}-10)/2))]]+(@{juegomanos_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Juegos de Manos (DES)</button>
@@ -339,88 +393,143 @@
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_juegomanos" value="[[[[(floor((@{dexterity}-10)/2))]]+(@{juegomanos_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
 					</div>
-                    
+                                 
+				 <!--OTRA COLUMNA-->
 		            <div class="sheet-col-1-2 sheet-padr" style="margin-left:-5px">
 			            <div class="sheet-row sheet-sub-header" style="margin-top: -3px;">
 					        <div class="sheet-col-1-5 sheet-center sheet-small-label">Comp</div>
 						    <div class="sheet-col-3-5 sheet-left sheet-small-label">&nbsp;</div>
 						    <div class="sheet-col-1-5 sheet-center sheet-small-label">Valor</div>
 						</div>
+				<!--Medicina-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_medicina_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_medicina_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Medicina" class="sheet-blank-roll-button" value="&{template:erd} {{title=Medicina}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{medicina_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{medicina_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Medicina (SAB)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_medicina" value="[[[[(floor((@{wisdom}-10)/2))]]+(@{medicina_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Naruraleza-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_naturaleza_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_naturaleza_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Naturaleza" class="sheet-blank-roll-button" value="&{template:erd} {{title=Naturaleza}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{naturaleza_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{naturaleza_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Naturaleza (INT)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_naturaleza" value="[[[[(floor((@{intelligence}-10)/2))]]+(@{naturaleza_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Percepcion-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_percepcion_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_percepcion_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Percepcion" class="sheet-blank-roll-button" value="&{template:erd} {{title=Percepción}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{percepcion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{percepcion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Percepción (SAB)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_percepcion" value="[[[[(floor((@{wisdom}-10)/2))]]+(@{percepcion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Perspicacia-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_perspicacia_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_perspicacia_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Perspicacia" class="sheet-blank-roll-button" value="&{template:erd} {{title=Perspicacia}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{perspicacia_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{perspicacia_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Perspicacia (SAB)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_perspicacia" name="attr_arcanos" value="[[[[(floor((@{wisdom}-10)/2))]]+(@{perspicacia_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Persuacion-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_persuasion_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_persuasion_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Persuasion" class="sheet-blank-roll-button" value="&{template:erd} {{title=Persuasión}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{charisma}-10)/2))]]+(@{persuasion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{charisma}-10)/2))]]+(@{persuasion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Persuasión (CAR)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_persuasion" value="[[[[(floor((@{charisma}-10)/2))]]+(@{persuasion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Religion-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_religion_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_religion_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Religion" class="sheet-blank-roll-button" value="&{template:erd} {{title=Religión}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{religion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{intelligence}-10)/2))]]+(@{religion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Religión (INT)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_religion" name="attr_arcanos" value="[[[[(floor((@{intelligence}-10)/2))]]+(@{religion_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Sigilo-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_sigilo_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_sigilo_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Sigilo" class="sheet-blank-roll-button" value="&{template:erd} {{title=Sigilo}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{dexterity}-10)/2))]]+(@{sigilo_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{dexterity}-10)/2))]]+(@{sigilo_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Sigilo (DES)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_sigilo" value="[[[[(floor((@{dexterity}-10)/2))]]+(@{sigilo_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Supervivencia-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_supervivencia_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_supervivencia_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Supervivencia" class="sheet-blank-roll-button" value="&{template:erd} {{title=Supervivencia}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{supervivencia_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{supervivencia_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Supervivencia (SAB)</button>
 				            </div>
 						    <div class="sheet-col-1-5 sheet-left "><input type="number" class="sheet-small-input" name="attr_supervivencia" name="attr_arcanos" value="[[[[(floor((@{wisdom}-10)/2))]]+(@{supervivencia_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]" disabled="true" /></div>
 						</div>
+				<!--Trato con animales-->		
 						<div class="sheet-row sheet-skills">
 						    <div class="sheet-col-1-5 sheet-center sheet-vert-middle">
-							    <input type="checkbox" value='1' name="attr_tratoanimales_comp" />
+							    <select class='sheet-small-input' value='0' name="attr_tratoanimales_comp" style="font-size:9px; height:20px">
+									<option value='0' >0</option>
+									<option value='0.5' >x1/2</option>
+									<option value='1' >x1</option>
+									<option value='2' >x2</option>
+								</select>
 						    </div>
 						    <div class="sheet-col-3-5 sheet-left">
                                 <button type="roll"  name="roll_Tratoanimales" class="sheet-blank-roll-button" value="&{template:erd} {{title=Trato con Animales}} {{subheader=@{character_name}}} {{roll1=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{tratoanimales_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}} {{roll2=[[1d20+[[(floor((@{wisdom}-10)/2))]]+(@{tratoanimales_comp}*[[floor((2+((@{lvl}-1)/4)))]])]]}}">Trato c/ Animales (SAB)</button>
